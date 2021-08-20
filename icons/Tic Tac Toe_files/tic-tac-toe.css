@@ -1,0 +1,196 @@
+@font-face {
+  font-family: Letter Magic;
+  src: url(./Fonts/letter-magic.ttf);
+}
+@font-face {
+  font-family: Built Titling;
+  src: url(./Fonts/built-titling-rg.ttf);
+}
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#game-info {
+  position: absolute;
+  left: 60px;
+  font-family: Built Titling;
+}
+#game-info-next-move {
+  letter-spacing: 4px;
+  font-size: 36px;
+}
+#game-board {
+  width: 600px;
+  height: 600px;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px gray;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: rgb(135, 150, 166);
+  gap: 6px;
+}
+.game-square {
+  place-self: center;
+  justify-self: stretch;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Letter Magic;
+  font-size: 70px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(247, 247, 247);
+  transition: background-color 0.3s;
+  font-family: Built Titling;
+  font-size: 100px;
+}
+.game-square-inactive {
+  place-self: center;
+  justify-self: stretch;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Letter Magic;
+  font-size: 70px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(247, 247, 247);
+  transition: background-color 0.3s;
+  font-family: Built Titling;
+  font-size: 100px;
+}
+.game-square-inactive:hover {
+  background-color: rgb(247, 247, 247);
+}
+.game-square-inactive:active {
+  background-color: rgb(247, 247, 247);
+}
+.game-square:hover {
+  background-color: rgb(212, 239, 212);
+}
+.game-square:active {
+  background-color: rgb(240, 240, 242);
+  box-shadow: inset 1px 1px 20px rgb(99, 99, 99);
+}
+#game-square-1 {
+  grid-area: 1/1/2/2;
+  border-radius: 20px 0px 0px 0px;
+}
+#game-square-2 {
+  grid-area: 1/2/2/3;
+  border-radius: 0px 0px 0px 0px;
+}
+#game-square-3 {
+  grid-area: 1/3/2/4;
+  border-radius: 0px 20px 0px 0px;
+}
+#game-square-4 {
+  grid-area: 2/1/3/2;
+  border-radius: 0px 0px 0px 0px;
+}
+#game-square-5 {
+  grid-area: 2/2/3/3;
+  border-radius: 0px 0px 0px 0px;
+}
+#game-title {
+  font-family: Letter Magic;
+  font-size: 40px;
+  color: rgb(122, 122, 122);
+  letter-spacing: 2px;
+  opacity: 0.4;
+}
+#game-square-6 {
+  grid-area: 2/3/3/4;
+  border-radius: 0px 0px 0px 0px;
+}
+#game-square-7 {
+  grid-area: 3/1/4/2;
+  border-radius: 0px 0px 0px 20px;
+}
+#game-square-8 {
+  grid-area: 3/2/4/3;
+  border-radius: 0px 0px 0px 0px;
+}
+#game-square-9 {
+  grid-area: 3/3/4/4;
+  border-radius: 0px 0px 20px 0px;
+}
+#btn-reset {
+  font-family: Built Titling;
+  font-size: 24px;
+  color: rgb(12, 74, 200);
+  letter-spacing: 2px;
+  font-weight: bold;
+  width: 140px;
+  height: 40px;
+  position: absolute;
+  left: 1050px;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgb(144, 144, 144);
+  border: 0;
+  border-radius: 20px;
+}
+#btn-reset:hover {
+  background-color: rgb(12, 74, 200);
+  color: white;
+}
+#btn-reset:active {
+  color: white;
+  background-color: rgb(12, 74, 200);
+  box-shadow: 0px 0px 0px;
+}
+.winning-line {
+  border: 3px solid rgba(220, 20, 60, 0.681);
+  width: 530px;
+  z-index: 2;
+  display: none;
+}
+#winning-line-1 {
+  position: absolute;
+  top: 135px;
+}
+#winning-line-2 {
+  position: absolute;
+}
+#winning-line-3 {
+  position: absolute;
+  top: 535px;
+}
+#winning-line-4 {
+  position: absolute;
+  transform: rotate(90deg);
+  left: 170px;
+}
+#winning-line-5 {
+  position: absolute;
+  transform: rotate(90deg);
+}
+#winning-line-6 {
+  position: absolute;
+  transform: rotate(90deg);
+  left: 560px;
+}
+#winning-line-7 {
+  position: absolute;
+  width: 680px;
+  transform: rotate(45deg);
+}
+#winning-line-8 {
+  position: absolute;
+  width: 680px;
+  transform: rotate(-45deg);
+}

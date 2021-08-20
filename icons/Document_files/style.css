@@ -1,0 +1,13 @@
+main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 100px;
+  font-family: optima;
+  text-align: center;
+}
